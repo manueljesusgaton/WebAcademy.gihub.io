@@ -1,0 +1,633 @@
+/*FUENTES*/
+
+@font-face {
+    font-family: 'TreuchetMS';
+    src: url(../fonts/TrebuchetMS.ttf);
+}
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url(../fonts/BebasNeue.otf);
+}
+
+@font-face {
+    font-family: 'WedSymbols';
+    src: url(../fonts/websymbols-regular-webfont.ttf);
+}
+
+
+/*GENERAL*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-image: url(../img/pattern.png);
+}
+
+.wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+/*CABECERA*/
+
+#header {
+    width: 100%;
+    height: 70px;
+    font-family: 'BebasNeue';
+    background-color: rgb(7, 0, 71);
+    color: white;
+}
+
+#blog {
+    display: block;
+    float: left;
+    margin-left: 20px;
+    margin-top: 5px;
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
+.gear {
+    display: block;
+    float: left;
+    font-family: 'WedSymbols';
+    margin-left: 35px;
+    margin-top: 7px;
+    font-size: 30px;
+}
+
+#logo:hover .gear {
+    animation: fromSide 300ms linear;
+    -webkit-animation: fromSide 300ms linear;
+}
+
+#logo:hover #blog {
+    animation: fromBelow 300ms linear;
+    -webkit-animation: fromBelow 300ms linear;
+}
+
+@keyframes fromBelow {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes fromSide {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+#logo {
+    cursor: pointer;
+    float: left;
+    background-color: rgb(237, 151, 26);
+    width: 200px;
+    height: 55px;
+    margin-top: 7px;
+    border-radius: 5px;
+    transition: all 300ms;
+    overflow: hidden;
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    -ms-transition: all 300ms;
+    -o-transition: all 300ms;
+}
+
+#logo:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(7, 0, 71)
+}
+
+#menu ul li {
+    display: block;
+    float: left;
+    font-size: 25px;
+    line-height: 70px;
+    margin-right: 20px;
+}
+
+#menu ul li:first-child {
+    margin-left: 493px;
+}
+
+#menu ul li:last-child {
+    margin-right: 0px;
+}
+
+
+#menu ul li a {
+    display: block;
+    color: white;
+    transition: 300ms all;
+    -webkit-transition: 300ms all;
+    -moz-transition: 300ms all;
+    -ms-transition: 300ms all;
+    -o-transition: 300ms all;
+}
+
+#menu ul li a:hover {
+    color: rgb(237, 151, 26);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+/*BANNER*/
+
+#banner {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 95.6%;
+    height: 60px;
+    background: rgb(237, 151, 26);
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 2px 1px black;
+    font-family: 'BebasNeue';
+    font-size: 30px;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: 4px;
+    border: solid 7px white;
+    box-shadow: 0px 0px 3px rgb(90, 90, 90);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#banner h1 {
+    animation: banner 1s linear;
+    -webkit-animation: banner 1s linear;
+}
+
+@keyframes banner {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+
+/*TARGETAS*/
+
+.card {
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+    float: left;
+    width: 161px;
+    height: 250px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 4px rgb(90, 90, 90);
+    text-align: center;
+    margin-right: 40px;
+    margin-top: 50px;
+    border-radius: 10px;
+    transition: all 300ms;
+}
+
+.card:hover {
+    background-color: black;
+}
+
+.card:last-child {
+    margin-right: 0px;
+}
+
+.card:first-child {
+    margin-left: 18px;
+}
+
+.icon {
+    display: block;
+    font-family: 'WedSymbols';
+    font-size: 45px;
+    margin: 25px;
+    transition: all 300ms;
+}
+
+.card:hover .icon {
+    color: rgb(255, 255, 255);
+    font-size: 61px;
+    margin: 15px;
+    animation: icon 300ms linear;
+    -webkit-animation: icon 300ms linear;
+}
+
+@keyframes icon {
+    0% {
+        transform: translateY(-200%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.category {
+    font-family: 'TreuchetMS';
+    color: rgb(237, 151, 26);
+    font-weight: bolder;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.card:hover .category {
+    animation: category 400ms linear;
+    -webkit-animation: category 400ms linear;
+}
+
+@keyframes category {
+    0% {
+        transform: translateY(-200%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.description {
+    font-family: 'TreuchetMS';
+    color: rgb(237, 151, 26);
+    font-weight: bolder;
+    font-size: 14px;
+    margin: 8px;
+}
+
+.card:hover .description {
+    animation: description 400ms linear;
+    -webkit-animation: description 400ms linear;
+}
+
+@keyframes description {
+    0% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/*BARRA LATERAL*/
+
+aside {
+    font-family: 'TreuchetMS';
+    display: block;
+    float: right;
+    width: 300px;
+    min-height: 1200px;
+    margin-top: 100px;
+    margin-right: 6px;
+}
+
+.title {
+    font-family: 'BebasNeue';
+    background-color: rgb(228, 228, 228);
+    font-size: 24px;
+    height: 35px;
+    width: auto;
+    margin-right: 15px;
+    padding-top: 3px;
+    padding-left: 10px;
+    letter-spacing: 2px;
+    box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
+    margin-bottom: 15px;
+}
+
+#search input:first-child {
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    box-shadow: 1px 1px 3px inset gray;
+    height: 30px;
+    width: 200px;
+    margin-bottom: 13px;
+    margin-left: 30px;
+    -webkit-border-radius: 5px 0px 0px 5px;
+    -moz-border-radius: 5px 0px 0px 5px;
+    -ms-border-radius: 5px 0px 0px 5px;
+    -o-border-radius: 5px 0px 0px 5px;
+}
+
+#search input:last-child {
+    font-family: 'WedSymbols';
+    float: right;
+    margin-right: 40px;
+    height: 30px;
+    width: 30px;
+    background-color: rgb(228, 228, 228);
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    -webkit-border-radius: 0px 5px 5px 0px;
+    -moz-border-radius: 0px 5px 5px 0px;
+    -ms-border-radius: 0px 5px 5px 0px;
+    -o-border-radius: 0px 5px 5px 0px;
+    background-color: white;
+    color: #393d3f;
+    box-shadow: inset 0px 1px 3px gray;
+    cursor: pointer;
+}
+
+#loging>form {
+    box-shadow: 0px 0px 4px gray;
+    background-color: white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-bottom: 13px;
+    margin-left: 20px;
+    width: 250px;
+    height: 180px;
+}
+
+#loging .boxlog {
+    width: 187px;
+    height: 30px;
+    margin-top: 13px;
+    border: none;
+    box-shadow: inset 0px 1px 4px gray;
+    border-radius: 0px 5px 5px 0px;
+    -webkit-border-radius: 0px 5px 5px 0px;
+    -moz-border-radius: 0px 5px 5px 0px;
+    -ms-border-radius: 0px 5px 5px 0px;
+    -o-border-radius: 0px 5px 5px 0px;
+}
+
+#loging label {
+    font-family: 'WedSymbols';
+    display: block;
+    float: left;
+    box-shadow: inset 1px 1px 4px gray;
+    border: none;
+    height: 25px;
+    width: 30px;
+    margin-top: 13px;
+    margin-left: 15px;
+    text-align: center;
+    border-radius: 5px 0px 0px 5px;
+    padding-top: 5px;
+    padding-left: 1px;
+    -webkit-border-radius: 5px 0px 0px 5px;
+    -moz-border-radius: 5px 0px 0px 5px;
+    -ms-border-radius: 5px 0px 0px 5px;
+    -o-border-radius: 5px 0px 0px 5px;
+}
+
+#loging .botlog {
+
+    background-color: rgb(237, 151, 26);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 70px;
+    height: 30px;
+    cursor: pointer;
+    margin-top: 13px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+
+}
+
+#b1 {
+    margin-left: 50px;
+}
+
+
+#loging>form>a {
+    display: block;
+    color: black;
+    font-size: 12px;
+    margin-left: 13px;
+    margin-top: 10px;
+}
+
+#loging>form>a:last-child {
+    margin-top: 5px;
+}
+
+
+#social div {
+    font-family: 'WedSymbols';
+    box-shadow: 0px 0px 4px gray;
+    background-color: white;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 130px;
+    height: 200px;
+    margin-bottom: 13px;
+    text-align: center;
+}
+
+#social a {
+    color: black;
+    font-size: 40px;
+    line-height: 60px;
+    transition: all 300ms;
+}
+
+#social a:hover {
+    font-size: 55px;
+}
+
+#colaboration div {
+    box-shadow: 0px 0px 4px gray;
+    background-color: white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-bottom: 13px;
+    margin-left: 20px;
+    width: 250px;
+    height: 180px;
+}
+
+/* ARTUCULOS */
+
+#articles {
+    font-family: 'TreuchetMS';
+    width: 600px;
+    margin-left: 20px;
+    margin-top: 100px;
+}
+
+#articles h2 {
+    font-family: 'BebasNeue';
+    background-color: rgb(228, 228, 228);
+    font-size: 24px;
+    height: 70px;
+    width: auto;
+    margin-right: 15px;
+    padding-top: 3px;
+    padding-left: 10px;
+    letter-spacing: 3px;
+    box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
+    margin-bottom: 15px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 35px;
+    font-weight: lighter;
+
+}
+
+#articles article {
+    box-shadow: 0px 0px 4px gray;
+    background-color: white;
+    width: 587px;
+    border-radius: 5px;
+    margin-top: 40px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.data {
+    display: block;
+    float: right;
+    background-color: rgb(7, 0, 71);
+    color: white;
+    padding: 6px;
+    border-radius: 0px 5px 0px 16px;
+    -webkit-border-radius: 0px 5px 0px 16px;
+    -moz-border-radius: 0px 5px 0px 16px;
+    -ms-border-radius: 0px 5px 0px 16px;
+    -o-border-radius: 0px 5px 0px 16px;
+}
+
+.data span {
+    margin-right: 5px;
+    margin-left: 5PX;
+}
+
+.see-more {
+    color: rgb(237, 151, 26);
+}
+
+.article-title {
+    color: rgb(237, 151, 26);
+    padding: 10px;
+    line-height: 32px;
+    font-size: 20px;
+}
+
+#articles p {
+    padding: 10px;
+    text-align: justify;
+}
+
+#goblog {
+    font-family: 'BebasNeue';
+    box-shadow: 0px 0px 4px gray;
+    background-color: white;
+    width: 587px;
+    border-radius: 5px;
+    margin-top: 40px;
+    margin-left: 20px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    line-height: 70px;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+#goblog:hover {
+    font-size: 45px;
+}
+
+#goblog a {
+    display: block;
+    color: rgb(237, 151, 26);
+}
+
+/* FOOTER */
+
+#footer {
+    background-color: rgb(7, 0, 71);
+    width: 100%;
+    height: 430px;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+#browsers img {
+    width: 30px;
+    height: 30px;
+}
+
+#menufooter a {
+    color: white;
+}
+
+#menufooter li {
+    margin: 20px;
+    font-size: 19px;
+    text-align: left;
+    border-bottom: 1px solid rgb(228, 228, 228);
+}
+
+#footer>.wrap div {
+    float: left;
+    width: 250px;
+    height: 370px;
+    margin: 40px;
+    text-align: center;
+    font-family: 'TreuchetMS';
+}
+
+.titlefo {
+    background-color: rgb(228, 228, 228);
+    box-shadow: none;
+    border-radius: 10px;
+    font-family: 'BebasNeue';
+    font-size: 24px;
+    height: 35px;
+    line-height: 38px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#location iframe {
+    height: 230px;
+    width: 230px;
+}
+
+#creator {
+    color: white;
+}
